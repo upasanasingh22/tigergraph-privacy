@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Personal knowledge graph</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+    
+    
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top">Your privacy matters !</a>
+            <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                            href="first.html">Provide info.</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                            href="second.html">Visualize your data</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="rights.html">Know
+                            your rights</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-4 px-0 px-lg-4 rounded" href="#contact"><img
+                                class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." /></a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead bg-primary text-white text-center">
+        <div class="container d-flex align-items-center flex-column">
+            <!-- Masthead Avatar Image-->
+            <BR>
+        </div>
+    </header>
+    <!-- Portfolio Section-->
+    <section class="page-section portfolio" id="portfolio">
+        <div class="container">
+            <!-- Portfolio Section Heading-->
+            <h4 class="page-section-heading text-center  text-secondary mb-0">Select the services or
+                applications you use: </h4>
+                <br>
+            
+
+            <script>
+                $(document).ready(function () {
+                    $("#submitBtn").click(function () {
+                        $("#myForm").submit(); // Submit the form
+                    });
+                });
+            </script>
+
+            <form action="submit_form" method="post" id="myForm">
+                <div id='tokenExpired'>
+                   <h2 >Connectivity issue, check the following</h2>
+                   <ul>
+                       <l1>Connectivity with TigerGraph server</l1>
+                       <li>parameters in configuration file</li>
+                       <li>TigerGraph token in configuration file</li>
+                   </ul>
+                </div>
+                <div id='div1'>
+                   
+                </div>
+                <button type="button" id="submitBtn">Submit Form</button>
+            </form>
+
+            <!-- TigerGraph content-->
+            
+        <!-- Submit form script -->
+        <script>
+            $(document).ready(function () {
+                $("#submitButton").click(function () {
+                    $("#contactForm").submit(); // Submit the form
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function () {
+                console.log("ready!");
+                $.ajax({
+                    type: 'GET',
+                    url: "http://localhost:8080/ServiceProvidersByType",
+                    dataType: "json",
+                }).done(function (data) {
+                    $("#tokenExpired").html("");  
+                    console.log(data)
+                    for (let i = 0; i < data.results.length; i++) {
+                        let d1 = data.results[i].providers_by_type;
+                        for (let j = 0; j < d1.length; j++) {
+                            $("#div1").append(
+                                $("<div>")
+                                    .addClass("masthead-subheading font-weight-light mb-0")
+                                    .html(d1[j].v_id)
+                            );
+                            let d2 = d1[j].attributes.providers;
+                            for (let k = 0; k < d2.length; k++) {
+                                // <input type="checkbox" name=${d1[j].v_id} id=${d1[j].v_id} value=${d2[k]}>
+                                $("#div1").append(
+                                    `<div class="form-check form-check-inline">
+                                        
+                                        <input type="checkbox" name='${d1[j].v_id}' id='${d1[j].v_id}' value='${d2[k]}'>
+                                        <label for='${d1[j].v_id}'>
+                                            ${d2[k]}
+                                        </label>
+                                    </div>`
+                                );
+                            }
+                            $("#div1").append(
+                            `<label for='${d1[j].v_id}'>Other</label>
+                            <input type="text" id='${d1[j].v_id}' name='${d1[j].v_id}'><br>`
+                            );
+                        }
+                    }
+                });
+            });
+        </script>
+
+
+        <!-- TIGERGRAPH FORM ENDS -->
+
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+
+
+</body>
+
+</html>

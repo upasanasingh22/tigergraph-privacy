@@ -1,0 +1,6 @@
+"ServiceProvider,Event,eventDate,eventType,url"
+"Equifax","Equifax breach 2017",2017,"Data leakage","https://en.wikipedia.org/wiki/2017_Equifax_data_breach"
+"Facebook","Facebook breach 2019",2019,Data leakage,"https://www.theguardian.com/technology/2018/sep/28/facebook-50-million-user-accounts-security-berach"
+"Labette Health","Labette Health 2022",2022,"Data leakage","https://www.labettehealth.com/about-us/labette-health-security-breach"
+"Google","Google privacy policy update",2022,"Informational","https://policies.google.com/privacy"
+"Biostar2","Biostart biometric data breach",2019,"Data leakage","https://us.norton.com/internetsecurity-emerging-threats-biometric-data-breach-database-exposes-fingerprints-and-facial-recognition-data.html"

@@ -1,0 +1,39 @@
+"ServiceType,InfoType,InfoCategory,InfoValue"
+Email service,Email Address,Personal Information,High
+Email service,Name,Personal Information,High
+Email service,Email Messages,Personal Information,High
+Search Engine,Internet search history,Social Information,Low
+Search Engine,IP Address,Personal Information,Medium
+Maps,GPS location,Personal Information,Medium
+Maps,Routing details,Personal Information,Medium
+Maps,Visited locations,Personal Information,Low
+Mobile OS,GPS Location,Personal Information,Medium
+Mobile OS,Address book,Social Information,Medium
+Web browser,Internet search history,Social Information,Low
+Web browser,Internet passwords,Personal Information,High
+Payment service,Credit card details,Financial Information,High
+File sharing,Email Address,Personal Information,High
+Social media,Phone number,Personal Information,High
+Social media,Contact details,Social Information,Medium
+Social media,Social political views,Social Information,Low
+Social media,Personal images,Personal Information,Medium
+Social media,Personal videos,Personal Information,Low
+Bank,Credit card number,Financial Information,High
+Bank,Transaction details,Financial Information,High
+Bank,Credit score,Financial Information,Medium
+Credit card provider,Credit card number,Financial Information,High
+Credit card provider,Transaction details,Financial Information,High
+Credit card provider,Credit score,Financial Information,Low
+Loan provider,Financial Information,Financial Information,Medium
+Medical Services,Medical records,Medical Information,High
+Insurance provider,Medical records,Medical Information,High
+Financial services,Financial information,Financial Information,High
+Financial services,Physical Address,Personal Information,High
+Financial services,Social security number,Personal Information,High
+Financial services,Date of birth,Personal Information,High
+Medical Services,Medical records,Medical Information,Medium
+Medical Services,Physical Address,Personal Information,High
+Medical Services,Date of birth,Personal Information,High
+Security servcies,Fingerprint,Biometric Information,High
+Security servcies,Photo,Personal Information,Medium
+Security servcies,Physical Address,Personal Information,High
