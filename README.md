@@ -1,3 +1,7 @@
+# Submission for TigerGraph Hackathon
+
+pls check submission video for details - https://www.youtube.com/watch?v=uyVaJmVIJfc
+
 # Steps to reproduce
 1. Install python and Jupyter Notebook
 2. cd to root directory (where package.gson file is)
