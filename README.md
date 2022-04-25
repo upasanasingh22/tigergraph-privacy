@@ -1,4 +1,9 @@
 # Submission for TigerGraph Hackathon
+This project helps people track who is using their personal data and in what manner. It starts with allowing people enter details into system and then helping them analyze the same and informs them about their rights, or security events which might have compromised their personal data.
+
+To make it easy for end users, I have added a simple web interface. First I thought to ask users what information did they provide to which service providers and when. But when I asked my friends and family to use this application, they found it difficult to remember all the information. So I started looking into the privacy policies of the service providers what information do they generally capture and used it as a base. 
+
+Now the application is added with these details in backend, user just need to select/add services they use and system will identify what information they might have shared with service provider. In case a breach is reported for that provider, it will be informed to user.
 
 
 ## Graph schema
