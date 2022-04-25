@@ -2,6 +2,12 @@
 
 pls check submission video for details - https://www.youtube.com/watch?v=uyVaJmVIJfc
 
+### Show all security events for a person and his/her related persons with type of data exposed
+
+#### Legend, persons - blue, event -red, data exposed - yellow
+
+![image](https://user-images.githubusercontent.com/104097974/165100919-cb6bc74d-6368-4d70-b79b-09dff0f88392.png)
+
 
 # Steps to reproduce
 1. Install python and Jupyter Notebook
@@ -22,9 +28,4 @@ example - Goolgle > Google Maps > Maps Service > Geo location
 
 ![image](https://user-images.githubusercontent.com/104097974/165100779-f22a7082-6d8c-407d-ad37-0ff68bb44684.png)
 
-### Show all security events for a person and his/her related persons with type of data exposed
-
-#### Legend, persons - blue, event -red, data exposed - yellow
-
-![image](https://user-images.githubusercontent.com/104097974/165100919-cb6bc74d-6368-4d70-b79b-09dff0f88392.png)
 
