@@ -1,5 +1,12 @@
 # Submission for TigerGraph Hackathon
 
+
+## Graph schema
+
+
+<img width="690" alt="image" src="https://user-images.githubusercontent.com/104097974/165105451-95498099-429e-403c-9b36-a20d62f894b9.png">
+
+
 pls check submission video for details - https://www.youtube.com/watch?v=uyVaJmVIJfc
 
 ### Show all security events for a person and his/her related persons with type of data exposed
